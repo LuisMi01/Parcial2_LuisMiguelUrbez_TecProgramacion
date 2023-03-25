@@ -32,3 +32,6 @@
   <li>a) Se recomienda que las acciones estén lo más acopladas posibles al código para obtener el mayor rendimiento posible.</li>
   <li>b) Se favorece la semántica y la reutilización de código en detrimento del rendimiento.</li>
   </ul>
+
+### Ejercicio 2: <br>
+<br>__¿Cuáles son las características de la programación orientada a objetos?__<br>
