@@ -85,3 +85,13 @@ realizar un disparo al usuario user en el punto shot_point. El método devolver�
 - La diferencia en el Battleship, la frigate y la canoe con el Ship es la forma de ser atacado y el
 tamaño fijo de cada uno de ellos.<br>
 - Los barcos y los usuarios no guardan las posiciones<br>
+
+
+### Ejercicio 5:<br>
+<br>Se propone una extensión del juego hundir la flota en la que, en vez de jugar con un solo tipo de barco, se pueda jugar con tres tipos de barcos diferentes. Estos tres tipos diferentes de barcos van a ser acorazados (Battleship), fragatas (Frigates), y canoas (Canoes).<br>
+<br>En base a estas especificaciones se solicita que:<br>
+<br>Programe una clase Battleship. Este barco es grande y fuerte con un tamaño fijo (es decir, su tamaño va a ser igual a 5 posiciones del tablero). Además, este barco especial tiene contenedores aislados, por lo tanto, necesita que toquen todas sus posiciones aisladas para hundirlo y requiere de la creación de los atributos correspondientes para controlar esta casuística. La implementación al ser atacado deberá ser modificada.<br>
+<br>Programe una clase Frigate. Este barco es mediano con un tamaño fijo (es decir, su tamaño va a ser igual a 3 posiciones del tablero).<br>
+<br>Programe una clase Canoe. Este barco es pequeño con un tamaño fijo (es decir, su tamaño va a ser igual a 1 posiciones del tablero).<br>
+<br>Reutilize tanto código como sea posible del ejercicio 4 para hacer esta extensión del juego.<br>
+<br>No es necesario implementar el docString correspondiente a las funciones y métodos desarrollados, aunque se recomienda hacerlo para facilitar la comprensión por parte del estudiante.<br>
