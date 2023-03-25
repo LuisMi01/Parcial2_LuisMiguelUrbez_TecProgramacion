@@ -81,6 +81,8 @@ realizar un disparo al usuario user en el punto shot_point. El método devolver�
 <li>Pruebe los objetos de la clase Usuario con los test cases que se le han pasado.</li>
 </ul>
 
+//Imagen
+
 <br>__Nota:__<br>
 - La diferencia en el Battleship, la frigate y la canoe con el Ship es la forma de ser atacado y el
 tamaño fijo de cada uno de ellos.<br>
@@ -106,3 +108,15 @@ tamaño fijo de cada uno de ellos.<br>
 <br>El diagrama de flujo de este módulo principal le ha sido proporcionado a modo de guía.<br>
 //Imagen
 <br>La acción One User attacks es realmente el ataque secuencial de User1 a user2 y de user2 a user1 (o viceversa).<br>
+
+
+### Ejercicio 7:<br>
+<br>Escribir un algoritmo que permita utilizar tres tablas hash para guardar los datos de barcos, que contemple las siguientes actividades:<br>
+<ul>
+<li>a. En la primera tabla hash la función hash debe ser sobre el tipo de barco, en la segunda tabla la función hash deberá utilizar el número del barco como clave, mientras que en la tercera el campo clave de la función hash será por el nombre del barco.</li>
+<li>b. El tamaño de la primera tabla debe ser lo suficientemente grande como para que pueda almacenar todos los distintos tipos de barcos, debe manejar las colisiones con alguna función de sondeo.</li>
+<li>c. El tamaño de cada una de las segundas tablas debe ser 15.</li>
+<li>d. El algoritmo debe permitir cargar tipos de barcos en la primera tabla y crear su respectiva segunda tabla, en el caso de que no exista.</li>
+<li>e. Si el barco es de más de un tipo deberá cargarlo en cada una de las tablas que indiquen estos tipos.</li>
+<li>f. Deberá permitir cargar barcos de los cuales se dispone de su número, nombre, tipo y nivel.</li>
+  </ul>
