@@ -10,12 +10,12 @@
 1) Los elementos que definen a un objeto son:
 <ul>
   <li>a) El tipo de visibilidad que tiene asignado: privado o público.</li>  
-  <li>b) La identidad, Los atributos que representan su estado y los métodos que representan su comportamiento.</li>
+  <li>b) La identidad, Los atributos que representan su estado y los métodos que representan su comportamiento.✅</li>
 </ul>
 2) El hecho de que un método pueda recibir un número variable de atributos se denomina: 
 <ul>
   <li>a) Herencia</li>
-  <li>b) Polimorfismo</li>
+  <li>b) Polimorfismo ✅</li>
   </ul>
 3) Imagine que la clase C hereda de la clase B. Y la clase B hereda de la clase A. Cuando se cree un objeto de la clase C, ¿cuál será la secuencia en que se ejecutarán los constructores?
   <ul>
