@@ -63,3 +63,20 @@ afectará al barco si se encuentra entre el punto de partida y el punto final. N
   <li>Pruebe los objetos de la clase Usuario con los test cases.</li>
 
 </ul>
+
+<br>Para ayudar en el desarrollo de este ejercicio, se le hace entrega de un UML parcialmente completo de la posible implementación de este juego, así como de la clase Point, la cual representa un punto. Se facilitan también los archivos vacios dónde deberían estar implementadas las clases que se piden y que tienen que ser completadas por el alumno. En dichas clases, están ya añadidos los casos de tests de cada una de ellas.<br>
+<br>c) Programe una clase User.<br>
+<ul>
+  <li>Incluya los atributos de esta clase y establezca la visibilidad adecuada (público, privado, protegido).</li>
+  <li>Programe un constructor que reciba como parámetro los barcos de inicio del usuario (al
+menos un barco). El método debe verificar el tipo y valor del parámetro y lanzar la excepción
+correspondiente cuando no se cumplan los requisitos.</li>
+<li>Programe los métodos setters y getters para la clase en función de lo que necesite. Si no
+necesita algún o ningún getter y/o setter, argumente por qué en un comentario del módulo.</li>
+<li>Programe el método attack(self, Point shot_point, User user). Este método se utiliza para
+realizar un disparo al usuario user en el punto shot_point. El método devolverá True si cualquiera de los barcos que no han sido hundidos ha sido acertado y falso en caso contrario. Se debe hacer el control de excepciones para este método.</li>
+<li>Programe el método get_shot(self, shot_point) de la clase Usuario. Este método se utiliza para recibir un disparo en el punto shot_point.</li>
+<li>Programe el método is_alive(self) de la clase Usuario. Este método get se utiliza para obtener el atributo is_alive. Este atributo sirve para saber si el usuario aún está vivo.</li>
+<li>Programe el método die(self) de la clase Usuario. Este método set se utiliza para establecer el atributo __alive en False. De esta forma, es posible matar al usuario.</li>
+<li>Pruebe los objetos de la clase Usuario con los test cases que se le han pasado.</li>
+</ul>
