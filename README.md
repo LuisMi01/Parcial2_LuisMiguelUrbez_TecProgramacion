@@ -80,3 +80,8 @@ realizar un disparo al usuario user en el punto shot_point. El método devolver�
 <li>Programe el método die(self) de la clase Usuario. Este método set se utiliza para establecer el atributo __alive en False. De esta forma, es posible matar al usuario.</li>
 <li>Pruebe los objetos de la clase Usuario con los test cases que se le han pasado.</li>
 </ul>
+
+<br>__Nota:__<br>
+- La diferencia en el Battleship, la frigate y la canoe con el Ship es la forma de ser atacado y el
+tamaño fijo de cada uno de ellos.<br>
+- Los barcos y los usuarios no guardan las posiciones<br>
