@@ -6,7 +6,6 @@
 
 ### Ejercicio 1:<br>
 <br>Responda a las cuestiones:<br>
-<br>La calificación máxima de esta parte tipo test es de 1 punto. Tenga en cuenta que:<br>
 
 1) Los elementos que definen a un objeto son:
 <ul>
