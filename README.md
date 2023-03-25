@@ -120,3 +120,14 @@ tamaño fijo de cada uno de ellos.<br>
 <li>e. Si el barco es de más de un tipo deberá cargarlo en cada una de las tablas que indiquen estos tipos.</li>
 <li>f. Deberá permitir cargar barcos de los cuales se dispone de su número, nombre, tipo y nivel.</li>
   </ul>
+  
+  
+### Ejercicio 8:<br>
+
+Implementar un grafo no dirigido que permita cargar puertos y las aristas que conecten dichos puertos, que permita resolver las siguientes tareas:<br>
+<ul>
+<li>a. cada arista debe tener la distancia que separa dichos puertos;</li>
+<li>b. realizar un barrido en profundidad desde el primer puerto en el grafo;</li>
+<li>c. determinar el camino más corto desde puerto Madero al puerto de Rodas;</li>
+<li>d. determinar el puerto con mayor número de aristas y eliminarlo.</li>
+</ul>
