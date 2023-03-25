@@ -49,8 +49,8 @@ La aplicación va a comenzar permitiendo que cada jugador posicione sus barcos e
 Cada jugador va a posicionar como máximo 3 barcos. Así, por ejemplo, cinco casillas consecutivas conforman un portaaviones; tres, una fragata; y una casilla aislada, una canoa.<br>
 <br>No es necesario implementar el docString correspondiente a las funciones y métodos desarrollados, aunque se recomienda hacer el diagrama de flujo de los métodos en papel de forma previa a su resolución.
 En base a estas especificaciones se solicita que:<br>
-<br>a) Programe la clase enumearada CardinalPoints, que contendrá los puntos cardinales: NORTH, EAST, SOUTH y WEST, por este orden.<br>
-b) Programe la clase Ship.<br>
+<br>__a) Programe la clase enumearada CardinalPoints, que contendrá los puntos cardinales: NORTH, EAST, SOUTH y WEST, por este orden.__<br>
+__b) Programe la clase Ship.__<br>
 
 <ul>
   <li>Incluya los atributos de esta clase atributos y establezca la visibilidad adecuada (público, privado, protegido). Se aconseja utilizar un punto de partida, el tamaño y el enumerado llamado CardinalPoint para poner la dirección en la que se situa el barco a partir de un punto de partida O utilizar un punto inicial y un punto final y comprobar en el constructor que ambos puntos forman una recta. Se necesitarán más atributos para llevar la cuenta de los toques del barco.</li>
@@ -65,7 +65,7 @@ afectará al barco si se encuentra entre el punto de partida y el punto final. N
 </ul>
 
 <br>Para ayudar en el desarrollo de este ejercicio, se le hace entrega de un UML parcialmente completo de la posible implementación de este juego, así como de la clase Point, la cual representa un punto. Se facilitan también los archivos vacios dónde deberían estar implementadas las clases que se piden y que tienen que ser completadas por el alumno. En dichas clases, están ya añadidos los casos de tests de cada una de ellas.<br>
-<br>c) Programe una clase User.<br>
+<br>__c) Programe una clase User.__<br>
 <ul>
   <li>Incluya los atributos de esta clase y establezca la visibilidad adecuada (público, privado, protegido).</li>
   <li>Programe un constructor que reciba como parámetro los barcos de inicio del usuario (al
