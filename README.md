@@ -41,4 +41,14 @@ __¿Cuáles son las características de la programación orientada a objetos?__<
 __¿Qué es la visibilidad de una variable o un método? ¿Qué tipos hay? ¿Cuándo debe utilizarse cada tipo?__<br>
 <br>- La visibilidad de una variable/metodo es la forma que tenemos de saber como de "conocido" es este metodo o atributo por el proyecto, es decir, si solo puede ser usado por una sola clase, si puede usarse por varios metodos/clases a la vez, etc. Estas son: Public: Un método o atributo tiene una visibilidad pública cuando todas las demás clases pueden acceder a ellos. Nos referimos a otra clase o una subclase. Private: Tan solo se puede ver y acceder a ellos desde el propio código de la clase. Y por ultimo Protected: Solo desde el propio código de su clase o de sus subclases pueden acceder.
 
-### Ejercicio 4:
+### Ejercicio 4:<br>
+
+El juego hundir la flota, conocido en el mundo anglosajón por su nombre en inglés battleship, es un juego tradicional de estrategia y algo de suerte, que involucra a dos participantes.<br>
+<br>En este ejercicio, vamos a hacer una versión programada en Java para que dos jugadores puedan jugar a este juego.
+La aplicación va a comenzar permitiendo que cada jugador posicione sus barcos en un único tablero. Cada jugador va a ocupar, según sus preferencias, una misma cantidad de casillas, horizontal y/o verticalmente, en base a las casillas sobre las cuales están representadas sus naves.
+Cada jugador va a posicionar como máximo 3 barcos. Así, por ejemplo, cinco casillas consecutivas conforman un portaaviones; tres, una fragata; y una casilla aislada, una canoa.<br>
+<br>No es necesario implementar el docString correspondiente a las funciones y métodos desarrollados, aunque se recomienda hacer el diagrama de flujo de los métodos en papel de forma previa a su resolución.
+En base a estas especificaciones se solicita que:<br>
+<br>a) Programe la clase enumearada CardinalPoints, que contendrá los puntos cardinales: NORTH, EAST, SOUTH y WEST, por este orden.<br>
+b) Programe la clase Ship.<br>
+
