@@ -35,3 +35,8 @@
 
 ### Ejercicio 2: <br>
 <br>__¿Cuáles son las características de la programación orientada a objetos?__<br>
+
+### Ejercicio 3:<br>
+<br>__¿Qué es la visibilidad de una variable o un método? ¿Qué tipos hay? ¿Cuándo debe utilizarse cada tipo?__<br>
+
+### Ejercicio 4:
