@@ -90,8 +90,19 @@ tamaño fijo de cada uno de ellos.<br>
 ### Ejercicio 5:<br>
 <br>Se propone una extensión del juego hundir la flota en la que, en vez de jugar con un solo tipo de barco, se pueda jugar con tres tipos de barcos diferentes. Estos tres tipos diferentes de barcos van a ser acorazados (Battleship), fragatas (Frigates), y canoas (Canoes).<br>
 <br>En base a estas especificaciones se solicita que:<br>
-<br>Programe una clase Battleship. Este barco es grande y fuerte con un tamaño fijo (es decir, su tamaño va a ser igual a 5 posiciones del tablero). Además, este barco especial tiene contenedores aislados, por lo tanto, necesita que toquen todas sus posiciones aisladas para hundirlo y requiere de la creación de los atributos correspondientes para controlar esta casuística. La implementación al ser atacado deberá ser modificada.<br>
-<br>Programe una clase Frigate. Este barco es mediano con un tamaño fijo (es decir, su tamaño va a ser igual a 3 posiciones del tablero).<br>
-<br>Programe una clase Canoe. Este barco es pequeño con un tamaño fijo (es decir, su tamaño va a ser igual a 1 posiciones del tablero).<br>
+<br>__Programe una clase Battleship.__ Este barco es grande y fuerte con un tamaño fijo (es decir, su tamaño va a ser igual a 5 posiciones del tablero). Además, este barco especial tiene contenedores aislados, por lo tanto, necesita que toquen todas sus posiciones aisladas para hundirlo y requiere de la creación de los atributos correspondientes para controlar esta casuística. La implementación al ser atacado deberá ser modificada.<br>
+<br>__Programe una clase Frigate.__ Este barco es mediano con un tamaño fijo (es decir, su tamaño va a ser igual a 3 posiciones del tablero).<br>
+<br>__Programe una clase Canoe.__ Este barco es pequeño con un tamaño fijo (es decir, su tamaño va a ser igual a 1 posiciones del tablero).<br>
 <br>Reutilize tanto código como sea posible del ejercicio 4 para hacer esta extensión del juego.<br>
 <br>No es necesario implementar el docString correspondiente a las funciones y métodos desarrollados, aunque se recomienda hacerlo para facilitar la comprensión por parte del estudiante.<br>
+
+
+### Ejercicio 6:<br>
+
+<br>En este ejercicio se pide que se implemente el módulo principal del juego hundir la flota. Este módulo va a implementar la partida que van a jugar los jugadores.<br>
+<br>En este módulo main, lo primero que se hace es obtener la configuración deseada de los barcos por parte de cada usuario sobre el tablero. Hay que tener en cuenta, que cada usuario solamente va a tener como máximo tres barcos en el tablero al iniciar la partida. La configuración de cada usuario va a ser introducida por consola.<br>
+<br>Seguidamente, una vez que se tienen las configuraciones, el juego puede comenzar entre los jugadores. En cada turno cada jugador va a atacar al otro jugador en una posición aleatoria. Cuando uno de los dos usuarios tenga ya todos sus barcos hundidos al acabar el turno, se acaba el juego y se indica quien es el ganador. En el caso de que los dos acaben sin barcos en el mismo turno, el juego indicará un empate. En cada turno los dos usuarios atacan con independencia de si sus barcos están hundidos.<br>
+<br>Recuerde utilizar las clases implementadas tanto en el ejercicio 4 como en el ejercicio 5 para implementar todos los componentes de este juego.<br>
+<br>El diagrama de flujo de este módulo principal le ha sido proporcionado a modo de guía.<br>
+//Imagen
+<br>La acción One User attacks es realmente el ataque secuencial de User1 a user2 y de user2 a user1 (o viceversa).<br>
