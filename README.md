@@ -19,24 +19,26 @@
   </ul>
 3) Imagine que la clase C hereda de la clase B. Y la clase B hereda de la clase A. Cuando se cree un objeto de la clase C, ¿cuál será la secuencia en que se ejecutarán los constructores?
   <ul>
-  <li>a) Primero el constructor de C, luego constructor de B y, finalmente, el constructor de A</li>
+  <li>a) Primero el constructor de C, luego constructor de B y, finalmente, el constructor de A ✅</li>
   <li>b) Primero el constructor de A, luego constructor de B y, finalmente, el constructor de C</li>
   </ul>
 4) Para referenciar los atributos de un objeto en un método de la misma clase
     <ul>
   <li>a) Debo utilizar la palabra reservada self como prefijo</li>
-  <li>b) Los atributos deben ser públicos, en caso contrario no se pueden referenciar desde métodos que no sean el constructor.étodos que no sean el constructor.étodos que no sean el constructor.</li>
+  <li>b) Los atributos deben ser públicos, en caso contrario no se pueden referenciar desde métodos que no sean el constructor.étodos que no sean el constructor.étodos que no sean el constructor.✅</li>
   </ul>
 5) En el paradigma de la programación orientado a objetos:
       <ul>
-  <li>a) Se recomienda que las acciones estén lo más acopladas posibles al código para obtener el mayor rendimiento posible.</li>
+  <li>a) Se recomienda que las acciones estén lo más acopladas posibles al código para obtener el mayor rendimiento posible.✅</li>
   <li>b) Se favorece la semántica y la reutilización de código en detrimento del rendimiento.</li>
   </ul>
 
 ### Ejercicio 2: <br>
-<br>__¿Cuáles son las características de la programación orientada a objetos?__<br>
+__¿Cuáles son las características de la programación orientada a objetos?__<br>
+<br>- Las caracteristicas de la programacion orientada a objetos es el uso de herramientas muy utiles como la abstracción, encapsulación, herencia y polimorfismo. Estas caracteristicas son ampliamente usadas para el uso de un buen codigo, al igual que son usados para el buen uso de los conceptos basicos de la programacion orientada a objetos (POO) como son los objetos, mensajes, clases, instancias y métodos.
 
 ### Ejercicio 3:<br>
-<br>__¿Qué es la visibilidad de una variable o un método? ¿Qué tipos hay? ¿Cuándo debe utilizarse cada tipo?__<br>
+__¿Qué es la visibilidad de una variable o un método? ¿Qué tipos hay? ¿Cuándo debe utilizarse cada tipo?__<br>
+<br>- La visibilidad de una variable/metodo es la forma que tenemos de saber como de "conocido" es este metodo o atributo por el proyecto, es decir, si solo puede ser usado por una sola clase, si puede usarse por varios metodos/clases a la vez, etc. Estas son: Public: Un método o atributo tiene una visibilidad pública cuando todas las demás clases pueden acceder a ellos. Nos referimos a otra clase o una subclase. Private: Tan solo se puede ver y acceder a ellos desde el propio código de la clase. Y por ultimo Protected: Solo desde el propio código de su clase o de sus subclases pueden acceder.
 
 ### Ejercicio 4:
