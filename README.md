@@ -52,3 +52,14 @@ En base a estas especificaciones se solicita que:<br>
 <br>a) Programe la clase enumearada CardinalPoints, que contendrá los puntos cardinales: NORTH, EAST, SOUTH y WEST, por este orden.<br>
 b) Programe la clase Ship.<br>
 
+<ul>
+  <li>Incluya los atributos de esta clase atributos y establezca la visibilidad adecuada (público, privado, protegido). Se aconseja utilizar un punto de partida, el tamaño y el enumerado llamado CardinalPoint para poner la dirección en la que se situa el barco a partir de un punto de partida O utilizar un punto inicial y un punto final y comprobar en el constructor que ambos puntos forman una recta. Se necesitarán más atributos para llevar la cuenta de los toques del barco.</li>
+<li>Programe un constructor que reciba los datos necesarios para crear un barco.</li>
+<li>Programe los métodos setters y getters para la clase en función de lo que necesite.</li>
+<li>Programe el método is_sunk(self) de la clase Ship. Método para saber si el barco ya está
+hundido.</li>
+<li>Programe el método get_shot(self, shot_point). Implementación recibir disparo. El disparo
+afectará al barco si se encuentra entre el punto de partida y el punto final. No se tendrá en cuenta si el disparo ha sido previamente hecho en el mismo punto o no. No es necesario hacer las comprobaciones para ver si el disparo está fuera del tablero de juego.</li>
+  <li>Pruebe los objetos de la clase Usuario con los test cases.</li>
+
+</ul>
