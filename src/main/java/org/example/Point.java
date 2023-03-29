@@ -1,11 +1,14 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Point extends Ship{
     protected int x;
     protected int y;
 
-    public Point(int size, CardinalPoints direction, int hits, int xInicio, int yInicio, int xFinal, int yFinal, boolean isSunk, int x, int y) {
-        super(size, direction, hits, xInicio, yInicio, xFinal, yFinal, isSunk);
+    public Point(boolean alive, ArrayList<Ship> ships, int numeroBarcosIniciales, int size, CardinalPoints direction, int hits, boolean isSunk, int x, int y) {
+        super(alive, ships, numeroBarcosIniciales, size, direction, hits, isSunk);
         this.x = x;
         this.y = y;
     }
@@ -35,3 +38,5 @@ public class Point extends Ship{
         this.y = y;
     }
 }
+
+

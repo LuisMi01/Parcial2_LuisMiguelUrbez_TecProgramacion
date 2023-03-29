@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Ship extends User{
@@ -9,23 +10,19 @@ public class Ship extends User{
     protected int size;
     protected CardinalPoints direction;
     protected int hits;
-    protected int xInicio;
-    protected int yInicio;
-    protected int xFinal;
-    protected int yFinal;
     protected boolean isSunk;
 
     //Métodos de la clase:
-    public Ship(int size, CardinalPoints direction, int hits, int xInicio, int yInicio, int xFinal, int yFinal, boolean isSunk) {
+
+
+    public Ship(boolean alive, ArrayList<Ship> ships, int numeroBarcosIniciales, int size, CardinalPoints direction, int hits, boolean isSunk) {
+        super(alive, ships, numeroBarcosIniciales);
         this.size = size;
         this.direction = direction;
         this.hits = hits;
-        this.xInicio = xInicio;
-        this.yInicio = yInicio;
-        this.xFinal = xFinal;
-        this.yFinal = yFinal;
         this.isSunk = isSunk;
     }
+    
 
     public void is_sunk(){
         if (hits == size){
@@ -60,38 +57,6 @@ public class Ship extends User{
 
     public void setHits(int hits) {
         this.hits = hits;
-    }
-
-    public int getxInicio() {
-        return xInicio;
-    }
-
-    public void setxInicio(int xInicio) {
-        this.xInicio = xInicio;
-    }
-
-    public int getyInicio() {
-        return yInicio;
-    }
-
-    public void setyInicio(int yInicio) {
-        this.yInicio = yInicio;
-    }
-
-    public int getxFinal() {
-        return xFinal;
-    }
-
-    public void setxFinal(int xFinal) {
-        this.xFinal = xFinal;
-    }
-
-    public int getyFinal() {
-        return yFinal;
-    }
-
-    public void setyFinal(int yFinal) {
-        this.yFinal = yFinal;
     }
 
     public boolean isSunk() {
