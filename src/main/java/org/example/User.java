@@ -15,7 +15,7 @@ public class User extends Menu{
         }
     }
     public void attack(Point shot_point, User user){
-        
+
     }
 
 
