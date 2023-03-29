@@ -3,7 +3,7 @@ package org.example;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Ship extends User{
+public class Ship {
     Scanner teclado = new Scanner(System.in);
 
     //Atributos de la clase:
@@ -12,17 +12,14 @@ public class Ship extends User{
     protected int hits;
     protected boolean isSunk;
 
+
     //Métodos de la clase:
-
-
     public Ship(boolean alive, ArrayList<Ship> ships, int numeroBarcosIniciales, int size, CardinalPoints direction, int hits, boolean isSunk) {
-        super(alive, ships, numeroBarcosIniciales);
         this.size = size;
         this.direction = direction;
         this.hits = hits;
         this.isSunk = isSunk;
     }
-    
 
     public void is_sunk(){
         if (hits == size){
@@ -32,7 +29,8 @@ public class Ship extends User{
     }
 
     public void get_shot(){
-
+        hits++;
+        System.out.println("El barco ha recibido un disparo");
     }
 
     public int getSize() {
