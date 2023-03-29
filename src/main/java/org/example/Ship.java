@@ -35,17 +35,7 @@ public class Ship extends User{
     }
 
     public void get_shot(){
-        System.out.println("A donde quieres disparar?");
-        System.out.println("Coordenada X: ");
-        int x = teclado.nextInt();
-        System.out.println("Coordenada Y: ");
-        int y = teclado.nextInt();
-        if (x >= xInicio && x <= xFinal && y >= yInicio && y <= yFinal){
-            hits++;
-            System.out.println("¡Has tocado un barco!");
-        } else {
-            System.out.println("¡Has fallado!");
-        }
+
     }
 
     public int getSize() {
