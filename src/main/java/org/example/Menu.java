@@ -15,79 +15,24 @@ public class Menu {
                 Ambos jugadores van a empezar con 3 barcos,
                  cada uno posicionara un tipo de barco en la casilla y direccion que elija
                 """);
-        System.out.println("Elijan el tamaño del tablero");
-        int capacidad = teclado.nextInt();
-        jugador1.setFilas(capacidad);
-        jugador1.setColumnas(capacidad);
-        jugador2.setFilas(capacidad);
-        jugador2.setColumnas(capacidad);
 
+
+        System.out.println("Inserte los tamaños de los tableros:");
         jugador1.crearTablero();
         jugador2.crearTablero();
 
-        System.out.println("Configuracion para el primer jugador:");
-        selectorBarcos();
-
-        System.out.println("Configuracion para el segundo jugador:");
-        selectorBarcos();
-
         jugador1.mostrarTablero();
         jugador2.mostrarTablero();
-    }
 
+        System.out.println("\nSe va a proceder a elijir los barcos para los jugadores:");
+        System.out.println("Empezamos por el primer jugarp (Elija sus tres barcos)");
+        jugador1.crearBarco();
+        System.out.println("\nTurno del segundo jugador (Elija sus tres barcos)");
+        jugador2.crearBarco();
 
-    public void selectorBarcos(){
-        System.out.println("Elija el tipo de barco que quiere colocar");
-        boolean terminar = false;
-        do {
-            int opcion;
-            System.out.println("1. Portaaviones (5 casillas)");
-            System.out.println("2. Fragata (3 casillas)");
-            System.out.println("3. Canoa (1 casillas)");
-            System.out.println("4. Salir");
-            opcion = teclado.nextInt();
+        System.out.println("\nSe va a proceder a colocar los barcos y mostrar ambos tableros");
+        
 
-            try {
-                switch (opcion) {
-                    case 1 -> {
-                        System.out.println("Has elegido el portaaviones");
-                        System.out.println("Introduce la coordenada X");
-                        int x = teclado.nextInt();
-                        System.out.println("Introduce la coordenada Y");
-                        int y = teclado.nextInt();
-                        System.out.println("Introduce la direccion en la que quieres colocar el barco (SOUTH, NORTH, EAST, WEST)");
-                        CardinalPoints direccionP = CardinalPoints.valueOf(teclado.next().toUpperCase());
-                        System.out.println("El barco esta en la posicion: " + x + " " + y + " " + direccionP);
-                    }
-                    case 2 -> {
-                        System.out.println("Has elegido el fragata");
-                        System.out.println("Introduce la coordenada X");
-                        int x1 = teclado.nextInt();
-                        System.out.println("Introduce la coordenada Y");
-                        int y1 = teclado.nextInt();
-                        System.out.println("Introduce la direccion en la que quieres colocar el barco (SOUTH, NORTH, EAST, WEST)");
-                        CardinalPoints direccionF = CardinalPoints.valueOf(teclado.next().toUpperCase());
-                        System.out.println("El barco esta en la posicion: " + x1 + " " + y1 + " " + direccionF);
-                    }
-                    case 3 -> {
-                        System.out.println("Has elegido el canoa");
-                        System.out.println("Introduce la coordenada X");
-                        int x2 = teclado.nextInt();
-                        System.out.println("Introduce la coordenada Y");
-                        int y2 = teclado.nextInt();
-                        System.out.println("Introduce la direccion en la que quieres colocar el barco (SOUTH, NORTH, EAST, WEST)");
-                        CardinalPoints direccionC = CardinalPoints.valueOf(teclado.next().toUpperCase());
-                        System.out.println("El barco esta en la posicion: " + x2 + " " + y2 + " " + direccionC);
-                    }
-                    case 4 -> terminar = true;
-                    default -> System.out.println("Debe ingresar un numero entre el 1 y 7");
-                }
-            } catch (InputMismatchException ex) {
-                System.out.println("Debes ingresar un numero.");
-                teclado.next();
-            }
-
-        }while (!terminar);
 
     }
 }

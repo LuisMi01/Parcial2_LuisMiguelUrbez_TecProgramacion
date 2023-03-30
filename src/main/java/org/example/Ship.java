@@ -11,14 +11,20 @@ public class Ship {
     protected CardinalPoints direction;
     protected int hits;
     protected boolean isSunk;
+    protected int coordenadaX;
+    protected int coordenadaY;
 
 
     //Métodos de la clase:
-    public Ship(boolean alive, ArrayList<Ship> ships, int numeroBarcosIniciales, int size, CardinalPoints direction, int hits, boolean isSunk) {
+
+
+    public Ship(int size, CardinalPoints direction, int hits, boolean isSunk, int coordenadaX, int coordenadaY) {
         this.size = size;
         this.direction = direction;
         this.hits = hits;
         this.isSunk = isSunk;
+        this.coordenadaX = coordenadaX;
+        this.coordenadaY = coordenadaY;
     }
 
     public void is_sunk(){
@@ -63,5 +69,21 @@ public class Ship {
 
     public void setSunk(boolean sunk) {
         isSunk = sunk;
+    }
+
+    public int getCoordenadaX() {
+        return coordenadaX;
+    }
+
+    public void setCoordenadaX(int coordenadaX) {
+        this.coordenadaX = coordenadaX;
+    }
+
+    public int getCoordenadaY() {
+        return coordenadaY;
+    }
+
+    public void setCoordenadaY(int coordenadaY) {
+        this.coordenadaY = coordenadaY;
     }
 }
