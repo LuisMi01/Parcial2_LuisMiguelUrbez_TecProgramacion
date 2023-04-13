@@ -93,42 +93,52 @@ public class User {
     }
 
     public void colocarBarcos() {
-        for (int i = 0; i < Barcos.size(); i++) {
-            if (Barcos.get(i).getDirection() == CardinalPoints.NORTH) {
-                for (int j = 0; j < Barcos.get(i).getSize(); j++) {
-                    tablero[Barcos.get(i).getCoordenadaX()][Barcos.get(i).getCoordenadaY() + j] = 1;
+        for (Ship barco : Barcos) {
+            if (barco instanceof Battleship) {
+                Battleship portaaviones = (Battleship) barco;
+                if (portaaviones.getDirection() == CardinalPoints.NORTH) {
+                    for (int i = 0; i < 5; i++) {
+                        tablero[portaaviones.getCoordenadaX()][portaaviones.getCoordenadaY() + i] = 5;
+                    }
+                } else if (portaaviones.getDirection() == CardinalPoints.SOUTH) {
+                    for (int i = 0; i < 5; i++) {
+                        tablero[portaaviones.getCoordenadaX()][portaaviones.getCoordenadaY() - i] = 5;
+                    }
+                } else if (portaaviones.getDirection() == CardinalPoints.EAST) {
+                    for (int i = 0; i < 5; i++) {
+                        tablero[portaaviones.getCoordenadaX() + i][portaaviones.getCoordenadaY()] = 5;
+                    }
+                } else if (portaaviones.getDirection() == CardinalPoints.WEST) {
+                    for (int i = 0; i < 5; i++) {
+                        tablero[portaaviones.getCoordenadaX() - i][portaaviones.getCoordenadaY()] = 5;
+                    }
                 }
-            } else if (Barcos.get(i).getDirection() == CardinalPoints.SOUTH) {
-                for (int j = 0; j < Barcos.get(i).getSize(); j++) {
-                    tablero[Barcos.get(i).getCoordenadaX()][Barcos.get(i).getCoordenadaY() - j] = 1;
+            } else if (barco instanceof Frigate) {
+                Frigate fragata = (Frigate) barco;
+                if (fragata.getDirection() == CardinalPoints.NORTH) {
+                    for (int i = 0; i < 3; i++) {
+                        tablero[fragata.getCoordenadaX()][fragata.getCoordenadaY() + i] = 3;
+                    }
+                } else if (fragata.getDirection() == CardinalPoints.SOUTH) {
+                    for (int i = 0; i < 3; i++) {
+                        tablero[fragata.getCoordenadaX()][fragata.getCoordenadaY() - i] = 3;
+                    }
+                } else if (fragata.getDirection() == CardinalPoints.EAST) {
+                    for (int i = 0; i < 3; i++) {
+                        tablero[fragata.getCoordenadaX() + i][fragata.getCoordenadaY()] = 3;
+                    }
+                } else if (fragata.getDirection() == CardinalPoints.WEST) {
+                    for (int i = 0; i < 3; i++) {
+                        tablero[fragata.getCoordenadaX() - i][fragata.getCoordenadaY()] = 3;
+                    }
                 }
-            } else if (Barcos.get(i).getDirection() == CardinalPoints.EAST) {
-                for (int j = 0; j < Barcos.get(i).getSize(); j++) {
-                    tablero[Barcos.get(i).getCoordenadaX() + j][Barcos.get(i).getCoordenadaY()] = 1;
-                }
-            } else if (Barcos.get(i).getDirection() == CardinalPoints.WEST) {
-                for (int j = 0; j < Barcos.get(i).getSize(); j++) {
-                    tablero[Barcos.get(i).getCoordenadaX() - j][Barcos.get(i).getCoordenadaY()] = 1;
-                }
+            } else if (barco instanceof Canoe) {
+                Canoe canoa = (Canoe) barco;
+                tablero[canoa.getCoordenadaX()][canoa.getCoordenadaY()] = 1;
             }
         }
     }
     public void attack(Point shot_point, User user) {
-        System.out.println("Vas a lanzar un ataque");
-        System.out.println("Introduce la coordenada X");
-        int x = teclado.nextInt();
-        if (x > columnas || x < 0) {
-            System.out.println("Introduce una coordenada X valida");
-            attack(shot_point, user);
-        }
-        System.out.println("Introduce la coordenada Y");
-        int y = teclado.nextInt();
-        if (y > filas || y < 0) {
-            System.out.println("Introduce una coordenada Y valida");
-            attack(shot_point, user);
-        }
-        shot_point.setX(x);
-        shot_point.setY(y);
 
         for (int i = filas; i < tablero.length; i++) {
             for (columnas = 0; columnas < tablero.length; columnas++) {

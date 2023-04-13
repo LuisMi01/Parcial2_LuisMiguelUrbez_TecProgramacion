@@ -18,7 +18,9 @@ public class Menu {
 
 
         System.out.println("Inserte los tamaños de los tableros:");
+        System.out.println("Tablero del primer jugador:");
         jugador1.crearTablero();
+        System.out.println("Tablero del segundo jugador:");
         jugador2.crearTablero();
 
         jugador1.mostrarTablero();
@@ -39,9 +41,6 @@ public class Menu {
         jugador2.mostrarTablero();
 
         System.out.println("Una vez mostrados los tableros se va a proceder a jugar\n");
-
-
-
 
     }
 }
