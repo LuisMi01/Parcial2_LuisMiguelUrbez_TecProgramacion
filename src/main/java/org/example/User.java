@@ -13,6 +13,9 @@ public class User {
     int filas, columnas;
     public int [][] tablero = new int[filas][columnas];
 
+    public static final int canoa = 1;
+    public static final int fragata = 3;
+    public static final int portaaviones = 5;
 
     public User(boolean alive, int numeroBarcosIniciales, int filas, int columnas) {
         this.alive = alive;
@@ -138,28 +141,52 @@ public class User {
             }
         }
     }
-    public void attack(Point shot_point, User user) {
 
-        for (int i = filas; i < tablero.length; i++) {
-            for (columnas = 0; columnas < tablero.length; columnas++) {
-                if (tablero[i][columnas] == 1 ) {
-                    System.out.println("Tocado");
-                } else {
-                    System.out.println("Has fallado");
+    public boolean attack(Point shot_point, User user) throws Exception {
+        boolean acierto = false;
+        try {
+            for (Ship ship : user.getBarcos()) {
+                if (ship instanceof Canoe) {
+                    if (tablero[shot_point.getX()][shot_point.getY()] == canoa){
+                        acierto = true;
+                        ship.get_shot2(shot_point);
+                        ship.is_sunk();
+                        break;
+                    } else {
+                        acierto = false;
+                    }
+                } else if (ship instanceof Frigate) {
+                    if (tablero[shot_point.getX()][shot_point.getY()] == fragata){
+                        acierto = true;
+                        ship.get_shot2(shot_point);
+                        ship.is_sunk();
+                        break;
+                    } else {
+                        acierto = false;
+                    }
+                } else if (ship instanceof Battleship) {
+                    if (tablero[shot_point.getX()][shot_point.getY()] == portaaviones){
+                        acierto = true;
+                        ship.get_shot2(shot_point);
+                        ship.is_sunk();
+                        break;
+                    } else {
+                        acierto = false;
+                    }
                 }
             }
+        } catch (Exception e) {
+            System.out.println("Elije un punto de disparo disponible.");
         }
-
+        return acierto;
+    }
+ 
+    public ArrayList<Ship> getBarcos() {
+        return Barcos;
     }
 
-    public void get_shot(Point point_shot){
-        for(int i = 0; filas < tablero.length; i++){
-            for(int j = 0; columnas < tablero.length; j++){
-                if(tablero[i][j] == 1){
-                    System.out.println("Tocado");
-                }
-            }
-        }
+    public void setBarcos(ArrayList<Ship> barcos) {
+        Barcos = barcos;
     }
 
     public void is_alive() {

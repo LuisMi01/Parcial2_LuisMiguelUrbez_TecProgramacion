@@ -1,6 +1,5 @@
 package org.example;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Ship {
@@ -34,9 +33,17 @@ public class Ship {
         }
     }
 
-    public void get_shot(){
-        hits++;
-        System.out.println("El barco ha recibido un disparo");
+    public void get_shot2(Point shot_point) {
+        try {
+            if (attack(shot_point, this) == true) {
+                User.tablero[shot_point.getX()][shot_point.getY()] = 'x';
+                System.out.println("¡Han acertado en un barco!");
+            } else if (attack(shot_point, this) == 2) {
+                System.out.println("¡Fallaste!");
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public int getSize() {
