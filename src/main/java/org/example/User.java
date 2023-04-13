@@ -5,11 +5,11 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class User {
+
     boolean alive;
     ArrayList<Ship> Barcos = new ArrayList<Ship>();
     int numeroBarcosIniciales;
     Scanner teclado = new Scanner(System.in);
-
     int filas, columnas;
     public int [][] tablero = new int[filas][columnas];
 
@@ -60,7 +60,7 @@ public class User {
                             int y = teclado.nextInt();
                             System.out.println("Introduce la direccion en la que quieres colocar el barco (SOUTH, NORTH, EAST, WEST)");
                             CardinalPoints direccionP = CardinalPoints.valueOf(teclado.next().toUpperCase());
-                            System.out.println("El barco esta en la posicion: " + x + " " + y + " " + direccionP);
+                            System.out.println("El barco esta en la posicion -> " + "x: " + x + " y: " + y + " en la direccion:" + direccionP);
                             Barcos.add(new Battleship(5, direccionP, 0, false, x, y, 5, 1));
                         }
                         case 2 -> {
@@ -71,7 +71,7 @@ public class User {
                             int y1 = teclado.nextInt();
                             System.out.println("Introduce la direccion en la que quieres colocar el barco (SOUTH, NORTH, EAST, WEST)");
                             CardinalPoints direccionF = CardinalPoints.valueOf(teclado.next().toUpperCase());
-                            System.out.println("El barco esta en la posicion: " + x1 + " " + y1 + " " + direccionF);
+                            System.out.println("El barco esta en la posicion -> " + "x: " + x1 + " y: " + y1 + " en la direccion:" + direccionF);
                             Barcos.add(new Frigate(3, direccionF, 0, false, x1, y1, 3, 1));
                         }
                         case 3 -> {
@@ -80,7 +80,7 @@ public class User {
                             int x2 = teclado.nextInt();
                             System.out.println("Introduce la coordenada Y");
                             int y2 = teclado.nextInt();
-                            System.out.println("El barco esta en la posicion: " + x2 + " " + y2);
+                            System.out.println("El barco esta en la posicion -> " + "x: " + x2 + " y: " + y2);
                             Barcos.add(new Canoe(1, CardinalPoints.NORTH, 0, false, x2, y2, 1, 1));
                         }
                         default -> System.out.println("Debe ingresar un numero entre el 1 y 7");
@@ -93,15 +93,24 @@ public class User {
     }
 
     public void colocarBarcos() {
-        for (int[] ints : tablero) {
-            for (int j = 0; j < tablero.length; j++) {
-                if (ints[j] == 1) {
-                    System.out.print("X ");
-                } else {
-                    System.out.print(ints[j] + " ");
+        for (int i = 0; i < Barcos.size(); i++) {
+            if (Barcos.get(i).getDirection() == CardinalPoints.NORTH) {
+                for (int j = 0; j < Barcos.get(i).getSize(); j++) {
+                    tablero[Barcos.get(i).getCoordenadaX()][Barcos.get(i).getCoordenadaY() + j] = 1;
+                }
+            } else if (Barcos.get(i).getDirection() == CardinalPoints.SOUTH) {
+                for (int j = 0; j < Barcos.get(i).getSize(); j++) {
+                    tablero[Barcos.get(i).getCoordenadaX()][Barcos.get(i).getCoordenadaY() - j] = 1;
+                }
+            } else if (Barcos.get(i).getDirection() == CardinalPoints.EAST) {
+                for (int j = 0; j < Barcos.get(i).getSize(); j++) {
+                    tablero[Barcos.get(i).getCoordenadaX() + j][Barcos.get(i).getCoordenadaY()] = 1;
+                }
+            } else if (Barcos.get(i).getDirection() == CardinalPoints.WEST) {
+                for (int j = 0; j < Barcos.get(i).getSize(); j++) {
+                    tablero[Barcos.get(i).getCoordenadaX() - j][Barcos.get(i).getCoordenadaY()] = 1;
                 }
             }
-            System.out.println();
         }
     }
     public void attack(Point shot_point, User user) {

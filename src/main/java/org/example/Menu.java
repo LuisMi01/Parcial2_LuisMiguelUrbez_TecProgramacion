@@ -31,7 +31,16 @@ public class Menu {
         jugador2.crearBarco();
 
         System.out.println("\nSe va a proceder a colocar los barcos y mostrar ambos tableros");
-        
+
+        jugador1.colocarBarcos();
+        jugador2.colocarBarcos();
+
+        jugador1.mostrarTablero();
+        jugador2.mostrarTablero();
+
+        System.out.println("Una vez mostrados los tableros se va a proceder a jugar\n");
+
+
 
 
     }
